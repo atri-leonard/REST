@@ -7,7 +7,7 @@ from snippets.serializers import SnippetSerializer
 
 # Create your views here.
 @csrf_exempt
-def snippet_list(request):
+def snippet_list(request, format=None):
     """
 
     :param request:
@@ -27,7 +27,7 @@ def snippet_list(request):
         return JsonResponse(serializer.errors, status=400)
 
 @csrf_exempt
-def snippet_detail(request, pk):
+def snippet_detail(request, pk, format=None):
     """
     Retrieve update or delete a code snippet.
     :param request:
