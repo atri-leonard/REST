@@ -45,6 +45,7 @@ from snippets import views
 from rest_framework.routers import DefaultRouter
 from django.conf.urls import url, include
 
+
 # Use a router and register our viewsets
 router = DefaultRouter()
 router.register(r'snippets', views.SnippetViewSet)
